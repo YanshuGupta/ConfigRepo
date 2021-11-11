@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: yanshu
+    hostname: localhost
   client:
     enabled: true
     service-url:
