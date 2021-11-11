@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: Client-ApiGateway
+  profiles:
+    active:
+    - default
+  config: 
+    import:
+    - optional:configserver:http://localhost:8888/
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: Dev-Portal
+        uri: lb://DEV-PORTAL
+        predicates:
+        - Path=/authenticate, /signup, /hello
+      - id: swagger
+        uri: lb://DEV-PORTAL
+        predicates:
+        - Path= /swagger-ui.html**, /webjars/**, /swagger-resources/**, /v2/api-docs
+#      - id: micro1
+#        uri: lb://MICROSERVICE1
+#        predicates:
+#        - Path= /micro1
+#      - id: micro2
+#        uri: lb://MICROSERVICE2
+#        predicates:
+#        - Path= /micro2
+
+server:
+  port: 8000
