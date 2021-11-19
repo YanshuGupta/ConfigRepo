@@ -1,2 +1,6 @@
-gateway:
-  authheaderkey: AuthorizationTest
+spring:
+# MongoDB Configuration
+  data:
+    mongodb:
+      database: mydb
+      uri: mongodb://yanshu:root@localhost:27017/mydb
