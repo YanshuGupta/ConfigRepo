@@ -26,4 +26,4 @@ spring:
   data:
     mongodb:
       database: mydb
-      uri: mongodb://@localhost:27017/mydb
+      uri: mongodb://localhost:27017/mydb
