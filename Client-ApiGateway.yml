@@ -1,10 +1,3 @@
-spring:
-# MongoDB Configuration
-  data:
-    mongodb:
-      database: mydb
-      uri: mongodb://yanshu:root@localhost:27017/mydb
-
 gateway:
   authheaderkey: Authorization
   authserviceuri: http://127.0.0.1:9999/validatetoken
