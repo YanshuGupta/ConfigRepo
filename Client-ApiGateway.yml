@@ -2,3 +2,10 @@ gateway:
   authheaderkey: Authorization
   authserviceuri: http://127.0.0.1:9999/
   bypassendpoints: /swagger-ui.html, /webjars, /swagger-resources, /v2/api-docs, /authenticate, /signup
+
+
+user:
+  roles: 
+    ROLE_ADMIN: /admin, /signup, /validatetoken, /authenticate, /user, /dashboardtiles, /stylesheet
+    ROLE_DEVLOPER: /validatetoken, /authenticate, /user, /dashboardtiles, /stylesheet
+    ROLE_USER: /authenticate, /user, /dashboardtiles, /stylesheet
